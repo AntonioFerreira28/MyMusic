@@ -12,9 +12,9 @@
 
 <body>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-info link">
         <div class="container-fluid">
-		<i class="bi bi-music-note-list"></i>
+          <i class="bi bi-music-note-list"></i>
           <a class="navbar-brand" href="#">MyMusic</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,16 +29,13 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Biblioteca
+                  Escute agora!
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Músicas</a></li>
-                  <li><a class="dropdown-item" href="#">Playlists</a></li>
-                  <li><a class="dropdown-item" href="#">Artistas</a></li>
-				  <li><a class="dropdown-item" href="#">Downloads</a></li>
-				  <li><a class="dropdown-item" href="#">Álbuns</a></li>
+                  <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=Rwd8lVhJGTU">As músicas mais tocadas no mundo!</a></li>
+                  <li><a class="dropdown-item" href="#">Minha Playlist</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Histórico</a></li>
+                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Nova Música</a></li>
                 </ul>
               </li>
             </ul>
@@ -56,86 +53,16 @@
                  <!-- Button trigger modal -->
                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="bi bi-plus"></i>
-                    Nova playlist
+                    Nova Música!
                 </button>
      
-        <div class="row  mt-3">
-            <div class="col-lg-3 col-md-6 col-12">
-
-                <div class="card">
-                    <div class="card-header">
-                      Para escutar no carro!
-                    </div>
-                        <div class="card-body">
-                        <p class="card-text">Circles - Post Malone</p>
-						<p class="card-text">Paradise - Coldplay</p>
-						<p class="card-text">Rebel Yell - Billy Idol</p>
-                            <p>
-                                <span class="badge text-bg-danger">Animada</span>
-                            </p>
-                        <a href="#" class="btn btn-success"title= "Marcar como concluída">
-                           <i class="bi bi-play-circle-fill"></i>
-                            Escutar Playlist
-                            </a>
-                        <a href="#" class="btn btn-danger" title="Apagar tarefa">
-                            <i class="bi bi-trash"></i>
-                            Excluir Playlist
-                            </a>
-                        </div>
-                </div> <!--Card-->
-
-            </div> <!--Final da coluna-->
-			<div class="col-lg-3 col-md-6 col-12">
-
-                <div class="card">
-                    <div class="card-header">
-                      Para festas!
-                    </div>
-                        <div class="card-body">
-                        <p class="card-text">Party Rock Anthem - LMFAO</p>
-						<p class="card-text">I Ain't Worried - OneRepublic</p>
-						<p class="card-text">Locked out of Heaven - Bruno Mars </p>
-                            <p>
-                                <span class="badge text-bg-danger">Para dançar</span>
-                            </p>
-                        <a href="#" class="btn btn-success"title= "Marcar como concluída">
-                            <i class="bi bi-play-circle-fill"></i>
-                            Escutar Playlist
-                            </a>
-                        <a href="#" class="btn btn-danger" title="Apagar tarefa">
-                            <i class="bi bi-trash"></i>
-                            Excluir Playlist
-                            </a>
-                        </div>
-                </div> <!--Card-->
-
-            </div> <!--Final da coluna-->
-			<div class="col-lg-3 col-md-6 col-12">
-
-                <div class="card">
-                    <div class="card-header">
-                      Para se desligar do mundo!
-                    </div>
-                        <div class="card-body">
-                        <p class="card-text">Bad Liar - Imagine Dragons</p>
-						<p class="card-text">Every Breath you Take - The Police</p>
-						<p class="card-text">November Rain - Guns N' Roses</p>
-                            <p>
-                                <span class="badge text-bg-danger">Animada</span>
-                            </p>
-                        <a href="#" class="btn btn-success"title= "Marcar como concluída">
-                            <i class="bi bi-play-circle-fill"></i>
-                            Escutar Playlist
-                            </a>
-                        <a href="#" class="btn btn-danger" title="Apagar tarefa">
-                            <i class="bi bi-trash"></i>
-                            Excluir Playlist
-                            </a>
-                        </div>
-                </div> <!--Card-->
-
-            </div> <!--Final da coluna-->
+        <div id="tarefas" class="row  mt-3">
            
+
+        </div> <!--Termina linha-->
+        
+
+    </div> <!--Fechamento do container-->
 
 
             
@@ -144,40 +71,51 @@
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-					<i class="bi bi-file-earmark-music-fill"></i>
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nova playlist</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Deixe sua playlist mais ainda com a sua cara!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                              <label for="titulo" class="form-label">Títulos</label>
+                              <label for="titulo" class="form-label">Título da Música</label>
                               <input type="text" class="form-control" id="titulo" aria-describedby="título">
                               <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
                             </div>
                             <div class="mb-3">
-                              <label for="descricao" class="form-label">Descrição</label>
+                              <label for="descricao" class="form-label">Artista</label>
                               <input type="text" class="form-control" id="descricao">
                             </div>
+                            <label for="titulo" class="form-label">Coloque o link da música!</label>
+                            <input type="text" class="form-control" id="link" aria-describedby="link">
                             <div class="mb-3">
-                                <select class="form-select" aria-label="categoria">
-                                    <option selected>Privacidade</option>
-                                    <option value="1">Pública</option>
-                                    <option value="2">Não listada</option>
-                                    <option value="3">Particular</option>
+                                <select class="form-select" aria-label="categoria" id="categoria">
+                                    <option selected>Selecione o gênero</option>
+                                    <option>Sertanejo</option>
+                                    <option>POP</option>
+                                    <option>R&B</option>
+                                    <option>Funk</option>
+                                    <option>Trap</option>
+                                    <option>Ópera</option>
+                                    <option>Samba</option>
+                                    <option>Gospel</option>
+                                    <option>Hip-Hop</option>
+                                    <option>KPOP</option>
+                                    <option>Eletrônica</option>
+                                    <option>Jazzz</option>
+                                    <option>Metal</option>
+                                    <option>Classic Rock</option>
+                                    <option>Alternative Rock</option>
+                                    <option>Cover</option>
+                                    <option>LoveSong</option>
+                                    <option>Country</option>
+                                    <option>Reagge</option>
                                   </select>
                             </div>
                           </form>
-						  
-						  <input class="form-control" type="file" id="musica" name="musica">
-						  <ul class="list-group" id="musicas-lista">
-						  <button type="button" class="btn btn-danger btn-sm" onclick="removerMusica(this)">Excluir</button>
-							  
-							
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>
                 </div>
@@ -187,6 +125,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
 
+    <script src="crude.js"></script>
 
 </body>
 
