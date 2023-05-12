@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
 document.querySelector("#buscar").addEventListener("keyup", () =>{
     let busca = document.querySelector("#buscar").value
     let tarefasFiltradas = tarefas.filter((tarefa) => {
-        return  busca
+        return  tarefa.titulo.toLowerCase().includes(busca.toLowerCase())
 
     })
     filtrar(tarefasFiltradas)
